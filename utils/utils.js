@@ -24,11 +24,11 @@ function validateUser(user){
         errors.dateOfJoining = "Enter your joining date"
     }
 
-    if(user.role.trim().length){
+    if(user.role.trim().length == 0){
         errors.role = "Enter your role"
     }
 
-    if(user.department.trim().length){
+    if(user.department.trim().length == 0){
         errors.department = "Enter your department"
     }
 

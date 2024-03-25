@@ -20,10 +20,10 @@ const userSchema = mongoose.Schema({
     description:{
         type:String
     },
-    Role:{
+    role:{
         type:String
     },
-    Department:{
+    department:{
         type:String
     }
 });

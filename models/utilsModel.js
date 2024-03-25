@@ -1,11 +1,11 @@
 import mongoose, { Schema } from "mongoose"
 
-const utilSchema = mongoose.Schema({
-departMent:{
+const departmentSchema = mongoose.Schema({
+department:{
     type:Array
 }
 })
 
 
-const Utils = mongoose.model('Utils',utilSchema)
- 
+const Department = mongoose.model('Department',departmentSchema)
+ export default Department
