@@ -1,11 +1,10 @@
-import mongoose, { Schema } from "mongoose"
+import mongoose, { Schema } from "mongoose";
 
 const departmentSchema = mongoose.Schema({
-department:{
-    type:Array
-}
-})
+  department: {
+    type: Array,
+  },
+});
 
-
-const Department = mongoose.model('Department',departmentSchema)
- export default Department
+const Department = mongoose.model("Department", departmentSchema);
+export default Department;

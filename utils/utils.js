@@ -1,41 +1,41 @@
-function validateUser(user){
-    const errors ={}
+function validateUser(user) {
+  const errors = {};
 
-    if(user.name.trim().length <=2){
-        errors.name = "Enter a valid name"
-    }
+  if (user.name.trim().length <= 2) {
+    errors.name = "Enter a valid name";
+  }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    console.log(emailRegex.test(user.email))
-    if(!emailRegex.test(user.email)){
-        errors.email = "Enter a valid email"
-    }
-    
-    const mobileRegex = /^[789]\d{9}$/;
-    if(!mobileRegex.test(user.mobile)){
-        errors.mobile = "Enter valid mobile number"
-    }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  console.log(emailRegex.test(user.email));
+  if (!emailRegex.test(user.email)) {
+    errors.email = "Enter a valid email";
+  }
 
-    if(!user.dateOfBirth){
-        errors.dateOfBirth = "Enter your date of birth"
-    }
+  const mobileRegex = /^[789]\d{9}$/;
+  if (!mobileRegex.test(user.mobile)) {
+    errors.mobile = "Enter valid mobile number";
+  }
 
-    if(!user.dateOfJoining){
-        errors.dateOfJoining = "Enter your joining date"
-    }
+  if (!user.dateOfBirth) {
+    errors.dateOfBirth = "Enter your date of birth";
+  }
 
-    if(user.role.trim().length == 0){
-        errors.role = "Enter your role"
-    }
+  if (!user.dateOfJoining) {
+    errors.dateOfJoining = "Enter your joining date";
+  }
 
-    if(user.department.trim().length == 0){
-        errors.department = "Enter your department"
-    }
+  if (user.role.trim().length == 0) {
+    errors.role = "Enter your role";
+  }
 
-    return {
-        valid:Object.keys(errors).length ===0,
-        errors
-    }
+  if (user.department.trim().length == 0) {
+    errors.department = "Enter your department";
+  }
+
+  return {
+    valid: Object.keys(errors).length === 0,
+    errors,
+  };
 }
 
-export default validateUser
+export default validateUser;
